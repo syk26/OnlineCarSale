@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Portal - SpeedWheels</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>SpeedWheels</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="seller.html" class="active">Seller</a></li>
+                <li><a href="search.html">Search</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Seller Registration</h2>
+            <form id="registerForm" onsubmit="return validateRegistration(event)">
+                <label for="regName">Name:</label>
+                <input type="text" id="regName" name="name" placeholder="Only letters and spaces" required>
+                <span class="error" id="regNameError"></span>
+
+                <label for="regAddress">Address:</label>
+                <input type="text" id="regAddress" name="address" placeholder="Alphanumeric and spaces" required>
+                <span class="error" id="regAddressError"></span>
+
+                <label for="regPhone">Phone Number:</label>
+                <input type="text" id="regPhone" name="phone" placeholder="China phone number" required>
+                <span class="error" id="regPhoneError"></span>
+
+                <label for="regEmail">Email Address:</label>
+                <input type="text" id="regEmail" name="email" placeholder="Must end with .cn or .com" required>
+                <span class="error" id="regEmailError"></span>
+
+                <label for="regUsername">Username:</label>
+                <input type="text" id="regUsername" name="username" placeholder="At least 6 alphanumeric chars" required>
+                <span class="error" id="regUsernameError"></span>
+
+                <label for="regPassword">Password:</label>
+                <input type="password" id="regPassword" name="password" placeholder="At least 6 alphanumeric chars" required>
+                <span class="error" id="regPasswordError"></span>
+
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <section class="form-section">
+            <h2>Seller Login</h2>
+            <form id="loginForm" onsubmit="return validateLogin(event)">
+                <label for="loginUsername">Username:</label>
+                <input type="text" id="loginUsername" name="username" required>
+                <span class="error" id="loginUsernameError"></span>
+
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" name="password" required>
+                <span class="error" id="loginPasswordError"></span>
+
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+        <section class="form-section">
+            <h2>Add Car</h2>
+            <form id="addCarForm" onsubmit="return validateAddCar(event)">
+                <label for="carColour">Colour:</label>
+                <input type="text" id="carColour" name="colour" required>
+                <span class="error" id="carColourError"></span>
+
+                <label for="carModel">Model:</label>
+                <input type="text" id="carModel" name="model" required>
+                <span class="error" id="carModelError"></span>
+
+                <label for="carYear">Year:</label>
+                <input type="number" id="carYear" name="year" placeholder="e.g. 2020" required>
+                <span class="error" id="carYearError"></span>
+
+                <label for="carLocation">Location:</label>
+                <input type="text" id="carLocation" name="location" required>
+                <span class="error" id="carLocationError"></span>
+
+                <label for="carPrice">Price (CNY):</label>
+                <input type="number" id="carPrice" name="price" placeholder="e.g. 150000" required>
+                <span class="error" id="carPriceError"></span>
+
+                <label for="carImage">Car Image:</label>
+                <input type="file" id="carImage" name="image" accept="image/*" required>
+                <span class="error" id="carImageError"></span>
+
+                <button type="submit">Add Car</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 SpeedWheels. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="validation.js"></script>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.navbar ul').classList.toggle('show');
+        }
+    </script>
+</body>
+</html>

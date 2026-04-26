@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpeedWheels - Premium Car Sales</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>SpeedWheels</h1>
+        </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="seller.html">Seller</a></li>
+                <li><a href="search.html">Search</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>Welcome to SpeedWheels</h2>
+            <p>Your trusted destination for premium quality vehicles. We connect sellers and buyers with transparency and ease.</p>
+        </section>
+
+        <section class="intro">
+            <h3>About Our Business</h3>
+            <p>SpeedWheels is a leading car sales platform dedicated to providing a seamless experience for both car sellers and buyers. Established with a commitment to quality and customer satisfaction, we offer a diverse range of vehicles to suit every need and budget.</p>
+            <p>Whether you are looking to sell your car or find your dream vehicle, SpeedWheels provides the tools and support you need.</p>
+        </section>
+
+        <section class="features">
+            <div class="feature-card">
+                <h4>Sell Your Car</h4>
+                <p>Register as a seller and list your vehicles with detailed information and images.</p>
+                <a href="seller.html" class="btn">Get Started</a>
+            </div>
+            <div class="feature-card">
+                <h4>Find Your Car</h4>
+                <p>Search our extensive database by model and year to find the perfect match.</p>
+                <a href="search.html" class="btn">Search Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 SpeedWheels. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://twitter.com" target="_blank">Twitter</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.navbar ul').classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
